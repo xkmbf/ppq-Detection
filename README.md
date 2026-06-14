@@ -156,7 +156,7 @@ visualdl --logdir work/vdl_dir
 ```bash
 python tools/eval.py \
     -c configs/picodet/ppq.yml \
-    weights=work/model/ppq/best_model.pdparams
+    -o weights=work/model/best_model/model.pdparams
 ```
 
 ### 推理
@@ -167,7 +167,8 @@ python tools/eval.py \
 python tools/infer.py \
     -c configs/picodet/ppq.yml \
     --infer_img=/path/to/image.jpg \
-    weights=work/model/ppq/best_model.pdparams
+    -o weights=work/model/best_model/model.pdparams \
+    --output_dir=/path/to/image_infer.jpg
 ```
 
 ### 模型导出
@@ -177,6 +178,6 @@ python tools/infer.py \
 ```bash
 python tools/export_model.py \
     -c configs/picodet/ppq.yml \
-    weights=work/model/ppq/best_model.pdparams \
-    --output_dir=work/inference_model
+    -o weights=work/model/best_model/model.pdparams \
+    --output_dir=work/export_model
 ```

@@ -9,8 +9,8 @@ _BASE_: [
 pretrain_weights: ""
 find_unused_parameters: True
 use_ema: true
-epoch: 50
-snapshot_epoch: 5
+epoch: 20
+snapshot_epoch: 2
 
 LCNet:
   scale: 2.0
@@ -51,4 +51,4 @@ LearningRate:
       steps: 200
 
 TrainReader:
-  batch_size: 5
+  batch_size: 4
